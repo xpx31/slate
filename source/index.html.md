@@ -62,15 +62,84 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
+
 # Advertisement
 # Business User
+
+URLs relateive to ___________, unless otherwise noted
+
+## Profile
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getProfile | GET user/{user-id}/profile | Get the profile of the user including name, photo, and description
+changeUserName | PUT user/{user-id}/name | Change the name of the user
+changeUserPhoto | PUT user/{user-id}/photo | Change the profile photo of the user
+changeUserDesc | PUT user/{user-id}/description | Change the description of the user
+
+## Send activities
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+sendActivity | POST user/{user-id}/activity | Send an activity
+deleteActivity | DELTE user/{user-id}/activity/{id} | delete an activity
+
 # Client User
+
+URLs relateive to ___________, unless otherwise noted
+
+## Profile
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getProfile | GET user/{user-id}/profile | Get the profile of the user including name, photo, and status
+changeUserName | PUT user/{user-id}/name | Change the name of the user
+changeUserPhoto | PUT user/{user-id}/photo | Change the profile photo of the user
+changeUserStatus | PUT user/{user-id}/status | Change the status of the user
+
+## Collection
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getCollection | GET user/{user-id}/collection | Get the collection of the user
+createCollection | POST user/{user-id}/collection | Create a new collection
+editCollection | PUT user/{user-id}/collection/{collection-id} | Change the name of the collection
+deleteCollection | DELTE user/{user-id}/collection/{collection-id} | Delete a collection
+addToCollection | PUT user/{user-id}/collection/{collection-id}/entity/{entity-id} | Add an entity into a collection
+removeFromCollection | DELETE user/{user-id}/collection/{collecition-id} | Delete an entity from a collection
+
+## Sharing
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+shareEntity | POST user/{user-id}/share/{platform-id}/entity/{entity-id} | Share an entity to a platform
+shareDiscount | POST user/{user-id}/share/{platform-id}/discount/{discount-id} | Share a discount to a platform
+shareRequest | POST user/{user-id}/share/{platform-id}/request/{request-id} | Share a request to a platform
+
 # Device ID
 # Discount
+
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getDiscountStatus | GET user/{user-id}/discout-status/{discount-id} | Get the information of discount distributed 
+
 # Geo-Service
 # Help
 # Login / Signu
 # Membership
+
+URLs relateive to ___________, unless otherwise noted
+
+## For Business Users
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getMembers | GET user/{user-id}/members | Get the member information
+setMemberCriteria | POST user/{user-id}/member-criteria | Set member criteria
+
+
 # Notification
 # Order
 # Reward
