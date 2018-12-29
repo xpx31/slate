@@ -229,7 +229,49 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#advertisement" class="toc-h1 toc-link" data-title="Advertisement">Advertisement</a>
+          </li>
+          <li>
+            <a href="#business-user" class="toc-h1 toc-link" data-title="Business User">Business User</a>
+          </li>
+          <li>
+            <a href="#client-user" class="toc-h1 toc-link" data-title="Client User">Client User</a>
+          </li>
+          <li>
+            <a href="#device-id" class="toc-h1 toc-link" data-title="Device ID">Device ID</a>
+          </li>
+          <li>
+            <a href="#discount" class="toc-h1 toc-link" data-title="Discount">Discount</a>
+          </li>
+          <li>
+            <a href="#geo-service" class="toc-h1 toc-link" data-title="Geo-Service">Geo-Service</a>
+          </li>
+          <li>
+            <a href="#help" class="toc-h1 toc-link" data-title="Help">Help</a>
+          </li>
+          <li>
+            <a href="#login-signu" class="toc-h1 toc-link" data-title="Login / Signu">Login / Signu</a>
+          </li>
+          <li>
+            <a href="#membership" class="toc-h1 toc-link" data-title="Membership">Membership</a>
+          </li>
+          <li>
+            <a href="#notification" class="toc-h1 toc-link" data-title="Notification">Notification</a>
+          </li>
+          <li>
+            <a href="#order" class="toc-h1 toc-link" data-title="Order">Order</a>
+          </li>
+          <li>
+            <a href="#reward" class="toc-h1 toc-link" data-title="Reward">Reward</a>
+          </li>
+          <li>
+            <a href="#search" class="toc-h1 toc-link" data-title="Search">Search</a>
+          </li>
+          <li>
+            <a href="#settings" class="toc-h1 toc-link" data-title="Settings">Settings</a>
+          </li>
+          <li>
+            <a href="#tagging" class="toc-h1 toc-link" data-title="Tagging">Tagging</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
@@ -255,11 +297,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>Sample API documentation.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
@@ -290,7 +328,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='advertisement'>Advertisement</h1><h1 id='business-user'>Business User</h1><h1 id='client-user'>Client User</h1><h1 id='device-id'>Device ID</h1><h1 id='discount'>Discount</h1><h1 id='geo-service'>Geo-Service</h1><h1 id='help'>Help</h1><h1 id='login-signu'>Login / Signu</h1><h1 id='membership'>Membership</h1><h1 id='notification'>Notification</h1><h1 id='order'>Order</h1><h1 id='reward'>Reward</h1><h1 id='search'>Search</h1><h1 id='settings'>Settings</h1><h1 id='tagging'>Tagging</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
