@@ -10,6 +10,8 @@
 
 <p align="center"><em>The example above was created with Slate. Check it out at <a href="https://lord.github.io/slate">lord.github.io/slate</a>.</em></p>
 
+<p align="center"><em>Proof of concept API documentation is hosted at <a href="https://xpx31.github.io/slate">xpx31.github.io/slate</a>.</em></p>
+
 Features
 ------------
 
