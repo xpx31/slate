@@ -226,16 +226,32 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
             <a href="#advertisement" class="toc-h1 toc-link" data-title="Advertisement">Advertisement</a>
           </li>
           <li>
             <a href="#business-user" class="toc-h1 toc-link" data-title="Business User">Business User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#profile" class="toc-h2 toc-link" data-title="Profile">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#send-activities" class="toc-h2 toc-link" data-title="Send activities">Send activities</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#client-user" class="toc-h1 toc-link" data-title="Client User">Client User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#profile-2" class="toc-h2 toc-link" data-title="Profile">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#collection" class="toc-h2 toc-link" data-title="Collection">Collection</a>
+                  </li>
+                  <li>
+                    <a href="#sharing" class="toc-h2 toc-link" data-title="Sharing">Sharing</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#device-id" class="toc-h1 toc-link" data-title="Device ID">Device ID</a>
@@ -250,10 +266,15 @@
             <a href="#help" class="toc-h1 toc-link" data-title="Help">Help</a>
           </li>
           <li>
-            <a href="#login-signu" class="toc-h1 toc-link" data-title="Login / Signu">Login / Signu</a>
+            <a href="#login-signup" class="toc-h1 toc-link" data-title="Login / Signup">Login / Signup</a>
           </li>
           <li>
             <a href="#membership" class="toc-h1 toc-link" data-title="Membership">Membership</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#for-business-users" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#notification" class="toc-h1 toc-link" data-title="Notification">Notification</a>
@@ -272,6 +293,12 @@
           </li>
           <li>
             <a href="#tagging" class="toc-h1 toc-link" data-title="Tagging">Tagging</a>
+          </li>
+          <li>
+            <a href="#other-samples" class="toc-h1 toc-link" data-title="Other Samples">Other Samples</a>
+          </li>
+          <li>
+            <a href="#sample-authentication" class="toc-h1 toc-link" data-title="Sample Authentication">Sample Authentication</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
@@ -298,7 +325,190 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Sample API documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<h1 id='advertisement'>Advertisement</h1><h1 id='business-user'>Business User</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='profile'>Profile</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getProfile</td>
+<td>GET user/{user-id}/profile</td>
+<td>Get the profile of the user including name, photo, and description</td>
+</tr>
+<tr>
+<td>changeUserName</td>
+<td>PUT user/{user-id}/name</td>
+<td>Change the name of the user</td>
+</tr>
+<tr>
+<td>changeUserPhoto</td>
+<td>PUT user/{user-id}/photo</td>
+<td>Change the profile photo of the user</td>
+</tr>
+<tr>
+<td>changeUserDesc</td>
+<td>PUT user/{user-id}/description</td>
+<td>Change the description of the user</td>
+</tr>
+</tbody></table>
+<h2 id='send-activities'>Send activities</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sendActivity</td>
+<td>POST user/{user-id}/activity</td>
+<td>Send an activity</td>
+</tr>
+<tr>
+<td>deleteActivity</td>
+<td>DELTE user/{user-id}/activity/{id}</td>
+<td>delete an activity</td>
+</tr>
+</tbody></table>
+<h1 id='client-user'>Client User</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='profile-2'>Profile</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getProfile</td>
+<td>GET user/{user-id}/profile</td>
+<td>Get the profile of the user including name, photo, and status</td>
+</tr>
+<tr>
+<td>changeUserName</td>
+<td>PUT user/{user-id}/name</td>
+<td>Change the name of the user</td>
+</tr>
+<tr>
+<td>changeUserPhoto</td>
+<td>PUT user/{user-id}/photo</td>
+<td>Change the profile photo of the user</td>
+</tr>
+<tr>
+<td>changeUserStatus</td>
+<td>PUT user/{user-id}/status</td>
+<td>Change the status of the user</td>
+</tr>
+</tbody></table>
+<h2 id='collection'>Collection</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getCollection</td>
+<td>GET user/{user-id}/collection</td>
+<td>Get the collection of the user</td>
+</tr>
+<tr>
+<td>createCollection</td>
+<td>POST user/{user-id}/collection</td>
+<td>Create a new collection</td>
+</tr>
+<tr>
+<td>editCollection</td>
+<td>PUT user/{user-id}/collection/{collection-id}</td>
+<td>Change the name of the collection</td>
+</tr>
+<tr>
+<td>deleteCollection</td>
+<td>DELTE user/{user-id}/collection/{collection-id}</td>
+<td>Delete a collection</td>
+</tr>
+<tr>
+<td>addToCollection</td>
+<td>PUT user/{user-id}/collection/{collection-id}/entity/{entity-id}</td>
+<td>Add an entity into a collection</td>
+</tr>
+<tr>
+<td>removeFromCollection</td>
+<td>DELETE user/{user-id}/collection/{collecition-id}</td>
+<td>Delete an entity from a collection</td>
+</tr>
+</tbody></table>
+<h2 id='sharing'>Sharing</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>shareEntity</td>
+<td>POST user/{user-id}/share/{platform-id}/entity/{entity-id}</td>
+<td>Share an entity to a platform</td>
+</tr>
+<tr>
+<td>shareDiscount</td>
+<td>POST user/{user-id}/share/{platform-id}/discount/{discount-id}</td>
+<td>Share a discount to a platform</td>
+</tr>
+<tr>
+<td>shareRequest</td>
+<td>POST user/{user-id}/share/{platform-id}/request/{request-id}</td>
+<td>Share a request to a platform</td>
+</tr>
+</tbody></table>
+<h1 id='device-id'>Device ID</h1><h1 id='discount'>Discount</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getDiscountStatus</td>
+<td>GET user/{user-id}/discout-status/{discount-id}</td>
+<td>Get the information of discount distributed</td>
+</tr>
+</tbody></table>
+<h1 id='geo-service'>Geo-Service</h1><h1 id='help'>Help</h1><h1 id='login-signup'>Login / Signup</h1><h1 id='membership'>Membership</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='for-business-users'>For Business Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getMembers</td>
+<td>GET user/{user-id}/members</td>
+<td>Get the member information</td>
+</tr>
+<tr>
+<td>setMemberCriteria</td>
+<td>POST user/{user-id}/member-criteria</td>
+<td>Set member criteria</td>
+</tr>
+</tbody></table>
+<h1 id='notification'>Notification</h1><h1 id='order'>Order</h1><h1 id='reward'>Reward</h1><h1 id='search'>Search</h1><h1 id='settings'>Settings</h1><h1 id='tagging'>Tagging</h1>
+<p>=============================================================================</p>
+<h1 id='other-samples'>Other Samples</h1><h1 id='sample-authentication'>Sample Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
@@ -328,7 +538,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 <aside class="notice">
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
-<h1 id='advertisement'>Advertisement</h1><h1 id='business-user'>Business User</h1><h1 id='client-user'>Client User</h1><h1 id='device-id'>Device ID</h1><h1 id='discount'>Discount</h1><h1 id='geo-service'>Geo-Service</h1><h1 id='help'>Help</h1><h1 id='login-signu'>Login / Signu</h1><h1 id='membership'>Membership</h1><h1 id='notification'>Notification</h1><h1 id='order'>Order</h1><h1 id='reward'>Reward</h1><h1 id='search'>Search</h1><h1 id='settings'>Settings</h1><h1 id='tagging'>Tagging</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
 <span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
