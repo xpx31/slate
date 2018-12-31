@@ -258,6 +258,14 @@
           </li>
           <li>
             <a href="#discount" class="toc-h1 toc-link" data-title="Discount">Discount</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#for-business-users" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                  </li>
+                  <li>
+                    <a href="#for-client-users" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#geo-service" class="toc-h1 toc-link" data-title="Geo-Service">Geo-Service</a>
@@ -272,7 +280,10 @@
             <a href="#membership" class="toc-h1 toc-link" data-title="Membership">Membership</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#for-business-users" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                    <a href="#for-business-users-2" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                  </li>
+                  <li>
+                    <a href="#for-client-users-2" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
                   </li>
               </ul>
           </li>
@@ -471,22 +482,6 @@
 </tbody></table>
 <h1 id='device-id'>Device ID</h1><h1 id='discount'>Discount</h1>
 <p>URLs relateive to ___________, unless otherwise noted</p>
-
-<table><thead>
-<tr>
-<th>Method</th>
-<th>HTTP request</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>getDiscountStatus</td>
-<td>GET user/{user-id}/discout-status/{discount-id}</td>
-<td>Get the information of discount distributed</td>
-</tr>
-</tbody></table>
-<h1 id='geo-service'>Geo-Service</h1><h1 id='help'>Help</h1><h1 id='login-signup'>Login / Signup</h1><h1 id='membership'>Membership</h1>
-<p>URLs relateive to ___________, unless otherwise noted</p>
 <h2 id='for-business-users'>For Business Users</h2>
 <table><thead>
 <tr>
@@ -496,14 +491,115 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>getMembers</td>
-<td>GET user/{user-id}/members</td>
+<td>getDiscountSummary</td>
+<td>GET user/{user-id}/discount</td>
+<td>Get the summary of all hosting discounts of the user</td>
+</tr>
+<tr>
+<td>getDiscountStatus</td>
+<td>GET user/{user-id}/discount/{discount-id}</td>
+<td>Get the information of discount distributed</td>
+</tr>
+<tr>
+<td>addDiscount</td>
+<td>POST user/{user-id}/discount</td>
+<td>Add a new discount</td>
+</tr>
+<tr>
+<td>editDiscount</td>
+<td>PATCH user/{user-id}/discount/{discount-id}</td>
+<td>Edit a discount</td>
+</tr>
+<tr>
+<td>removeDiscount</td>
+<td>DELETE user/{user-id}/discount/{discount-id}</td>
+<td>Delete a discount</td>
+</tr>
+</tbody></table>
+<h2 id='for-client-users'>For Client Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>showDiscount</td>
+<td>GET user/{client-user-id}/user/{business-user-id}/discount</td>
+<td>Show discount information</td>
+</tr>
+<tr>
+<td>collectDiscount</td>
+<td>POST user/{user-id}/discount/{discount-id}</td>
+<td>Add a discount to the user&#39;s account</td>
+</tr>
+<tr>
+<td>applyDiscount</td>
+<td>POST user/{user-id}/discount/{discount-id}/apply</td>
+<td>Apply a discount</td>
+</tr>
+<tr>
+<td>removeDiscount</td>
+<td>DELETE user/{user-id}/discount/{discount-id}</td>
+<td>Remove a discount from the user&#39;s account</td>
+</tr>
+</tbody></table>
+<h1 id='geo-service'>Geo-Service</h1><h1 id='help'>Help</h1><h1 id='login-signup'>Login / Signup</h1><h1 id='membership'>Membership</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='for-business-users-2'>For Business Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getMember</td>
+<td>GET user/{user-id}/member</td>
 <td>Get the member information</td>
 </tr>
 <tr>
-<td>setMemberCriteria</td>
-<td>POST user/{user-id}/member-criteria</td>
-<td>Set member criteria</td>
+<td>addMember</td>
+<td>POST user/{user-id}/member/{user-id}</td>
+<td>Add a user as member</td>
+</tr>
+<tr>
+<td>removeMember</td>
+<td>DELTE user/{user-id}/member/{user-id}</td>
+<td>Delete a user from membership</td>
+</tr>
+<tr>
+<td>setMemberCriteriaEmail</td>
+<td>POST user/{user-id}/member-criteria-email</td>
+<td>Set member email criteria</td>
+</tr>
+<tr>
+<td>setMemberCriteriaAge</td>
+<td>POST user/{user-id}/member-criteria-age</td>
+<td>Set member age criteria</td>
+</tr>
+</tbody></table>
+
+<p>...</p>
+<h2 id='for-client-users-2'>For Client Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>joinMembership</td>
+<td>POST user/{user-id}/membership/{membership-id}</td>
+<td>Join a membership</td>
+</tr>
+<tr>
+<td>quitMembership</td>
+<td>DELTE user/{user-id}/membership/{membership-id}</td>
+<td>Quit a membership</td>
 </tr>
 </tbody></table>
 <h1 id='notification'>Notification</h1><h1 id='order'>Order</h1><h1 id='reward'>Reward</h1><h1 id='search'>Search</h1><h1 id='settings'>Settings</h1><h1 id='tagging'>Tagging</h1>
