@@ -80,9 +80,24 @@ shareRequest | POST user/{user-id}/share/{platform-id}/request/{request-id} | Sh
 
 URLs relateive to ___________, unless otherwise noted
 
+## For Business Users
+
 Method | HTTP request | Description
 -------| ------------ | -----------
-getDiscountStatus | GET user/{user-id}/discout-status/{discount-id} | Get the information of discount distributed 
+getDiscountSummary | GET user/{user-id}/discount | Get the summary of all hosting discounts of the user
+getDiscountStatus | GET user/{user-id}/discount/{discount-id} | Get the information of discount distributed
+addDiscount | POST user/{user-id}/discount | Add a new discount
+editDiscount | PATCH user/{user-id}/discount/{discount-id} | Edit a discount
+removeDiscount | DELETE user/{user-id}/discount/{discount-id} | Delete a discount
+
+## For Client Users
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+showDiscount | GET user/{client-user-id}/user/{business-user-id}/discount | Show discount information
+collectDiscount | POST user/{user-id}/discount/{discount-id} | Add a discount to the user's account
+applyDiscount | POST user/{user-id}/discount/{discount-id}/apply | Apply a discount
+removeDiscount | DELETE user/{user-id}/discount/{discount-id} | Remove a discount from the user's account
 
 # Geo-Service
 # Help
@@ -95,9 +110,20 @@ URLs relateive to ___________, unless otherwise noted
 
 Method | HTTP request | Description
 -------| ------------ | -----------
-getMembers | GET user/{user-id}/members | Get the member information
-setMemberCriteria | POST user/{user-id}/member-criteria | Set member criteria
+getMember | GET user/{user-id}/member | Get the member information
+addMember | POST user/{user-id}/member/{user-id} | Add a user as member
+removeMember | DELTE user/{user-id}/member/{user-id} | Delete a user from membership
+setMemberCriteriaEmail | POST user/{user-id}/member-criteria-email | Set member email criteria
+setMemberCriteriaAge | POST user/{user-id}/member-criteria-age | Set member age criteria
+...
 
+## For Client Users
+
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+joinMembership | POST user/{user-id}/membership/{membership-id} | Join a membership
+quitMembership | DELTE user/{user-id}/membership/{membership-id} | Quit a membership
 
 # Notification
 # Order
