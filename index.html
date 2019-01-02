@@ -227,6 +227,14 @@
           </li>
           <li>
             <a href="#advertisement" class="toc-h1 toc-link" data-title="Advertisement">Advertisement</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#for-business-users" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                  </li>
+                  <li>
+                    <a href="#for-client-users" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#business-user" class="toc-h1 toc-link" data-title="Business User">Business User</a>
@@ -260,10 +268,10 @@
             <a href="#discount" class="toc-h1 toc-link" data-title="Discount">Discount</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#for-business-users" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                    <a href="#for-business-users-2" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
                   </li>
                   <li>
-                    <a href="#for-client-users" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
+                    <a href="#for-client-users-2" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
                   </li>
               </ul>
           </li>
@@ -274,16 +282,16 @@
             <a href="#help" class="toc-h1 toc-link" data-title="Help">Help</a>
           </li>
           <li>
-            <a href="#login-signup" class="toc-h1 toc-link" data-title="Login / Signup">Login / Signup</a>
+            <a href="#login-signup-password" class="toc-h1 toc-link" data-title="Login / Signup / Password">Login / Signup / Password</a>
           </li>
           <li>
             <a href="#membership" class="toc-h1 toc-link" data-title="Membership">Membership</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#for-business-users-2" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                    <a href="#for-business-users-3" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
                   </li>
                   <li>
-                    <a href="#for-client-users-2" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
+                    <a href="#for-client-users-3" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
                   </li>
               </ul>
           </li>
@@ -292,15 +300,45 @@
           </li>
           <li>
             <a href="#order" class="toc-h1 toc-link" data-title="Order">Order</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#for-business-users-4" class="toc-h2 toc-link" data-title="For Business Users">For Business Users</a>
+                  </li>
+                  <li>
+                    <a href="#for-client-users-4" class="toc-h2 toc-link" data-title="For Client Users">For Client Users</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#reward" class="toc-h1 toc-link" data-title="Reward">Reward</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#display-reward-points" class="toc-h2 toc-link" data-title="Display Reward Points">Display Reward Points</a>
+                  </li>
+                  <li>
+                    <a href="#add-reward-points" class="toc-h2 toc-link" data-title="Add Reward Points">Add Reward Points</a>
+                  </li>
+                  <li>
+                    <a href="#deduct-reward-points" class="toc-h2 toc-link" data-title="Deduct Reward Points">Deduct Reward Points</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#search" class="toc-h1 toc-link" data-title="Search">Search</a>
           </li>
           <li>
             <a href="#settings" class="toc-h1 toc-link" data-title="Settings">Settings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#general-settings" class="toc-h2 toc-link" data-title="General Settings">General Settings</a>
+                  </li>
+                  <li>
+                    <a href="#personal-settings" class="toc-h2 toc-link" data-title="Personal Settings">Personal Settings</a>
+                  </li>
+                  <li>
+                    <a href="#other-settings" class="toc-h2 toc-link" data-title="Other Settings">Other Settings</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#tagging" class="toc-h1 toc-link" data-title="Tagging">Tagging</a>
@@ -336,7 +374,47 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Sample API documentation.</p>
-<h1 id='advertisement'>Advertisement</h1><h1 id='business-user'>Business User</h1>
+<h1 id='advertisement'>Advertisement</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='for-business-users'>For Business Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>submitAds</td>
+<td>POST user/{user-id}/ads</td>
+<td>Submit a new advertisement</td>
+</tr>
+<tr>
+<td>editAds</td>
+<td>PUT user/{user-id}/ads/{ads-id}</td>
+<td>Edit an advertisement</td>
+</tr>
+<tr>
+<td>deleteAds</td>
+<td>DELETE user/{user-id}/ads/{ads-id}</td>
+<td>Delete an advertisement</td>
+</tr>
+</tbody></table>
+<h2 id='for-client-users'>For Client Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>clickAds</td>
+<td>POST user/{user-id}/ads/{ads-id}</td>
+<td>Submit advertisement click information</td>
+</tr>
+</tbody></table>
+<h1 id='business-user'>Business User</h1>
 <p>URLs relateive to ___________, unless otherwise noted</p>
 <h2 id='profile'>Profile</h2>
 <table><thead>
@@ -480,9 +558,25 @@
 <td>Share a request to a platform</td>
 </tr>
 </tbody></table>
-<h1 id='device-id'>Device ID</h1><h1 id='discount'>Discount</h1>
+<h1 id='device-id'>Device ID</h1>
 <p>URLs relateive to ___________, unless otherwise noted</p>
-<h2 id='for-business-users'>For Business Users</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getDeviceNameAndMac</td>
+<td>GET user/{user-id}/device</td>
+<td>Get the list of names and MAC address of the devices of the user</td>
+</tr>
+</tbody></table>
+<h1 id='discount'>Discount</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='for-business-users-2'>For Business Users</h2>
 <table><thead>
 <tr>
 <th>Method</th>
@@ -515,8 +609,28 @@
 <td>DELETE user/{user-id}/discount/{discount-id}</td>
 <td>Delete a discount</td>
 </tr>
+<tr>
+<td>addDiscountRequest</td>
+<td>POST user/{requester-user-id}/request/discount/{discount-id}</td>
+<td>Submit a request of a discount</td>
+</tr>
+<tr>
+<td>removeDiscountRequest</td>
+<td>DELETE user/{requester-user-id}/request/discount/{discount-id}</td>
+<td>Delete a request of a discount</td>
+</tr>
+<tr>
+<td>approveDiscount</td>
+<td>POST user/{approver-user-id}/approve/discount/{discount-id}</td>
+<td>Approve a discount request from another user</td>
+</tr>
+<tr>
+<td>rejectDiscount</td>
+<td>DELETE user/{approver-user-id}/approve/discount/{discount-id}</td>
+<td>Delete a discount request from another user</td>
+</tr>
 </tbody></table>
-<h2 id='for-client-users'>For Client Users</h2>
+<h2 id='for-client-users-2'>For Client Users</h2>
 <table><thead>
 <tr>
 <th>Method</th>
@@ -545,9 +659,82 @@
 <td>Remove a discount from the user&#39;s account</td>
 </tr>
 </tbody></table>
-<h1 id='geo-service'>Geo-Service</h1><h1 id='help'>Help</h1><h1 id='login-signup'>Login / Signup</h1><h1 id='membership'>Membership</h1>
+<h1 id='geo-service'>Geo-Service</h1>
 <p>URLs relateive to ___________, unless otherwise noted</p>
-<h2 id='for-business-users-2'>For Business Users</h2>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getGeoLoc</td>
+<td>GET user/{user-id}/geoloc</td>
+<td>Get the latitude and longtitude of the user</td>
+</tr>
+<tr>
+<td>getDrivingStatus</td>
+<td>GET user/{user-id}/driving</td>
+<td>Get the driving time and distance from user&#39;s current location</td>
+</tr>
+<tr>
+<td>getMap</td>
+<td>GET user/{user-id}/map</td>
+<td>Get the map with direction of the user&#39;s current location to the destination</td>
+</tr>
+</tbody></table>
+<h1 id='help'>Help</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>submitFeedback</td>
+<td>POST user/{user-id}/feedback</td>
+<td>Submit a feedback</td>
+</tr>
+</tbody></table>
+<h1 id='login-signup-password'>Login / Signup / Password</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>signup</td>
+<td>POST signup</td>
+<td>Submit a signup request</td>
+</tr>
+<tr>
+<td>login</td>
+<td>POST login</td>
+<td>Submit a login request</td>
+</tr>
+<tr>
+<td>verifyUser</td>
+<td>POST verify-user</td>
+<td>Verify the user&#39;s information in a forget password event</td>
+</tr>
+<tr>
+<td>changePassword</td>
+<td>POST change-password</td>
+<td>Change the password of the user</td>
+</tr>
+</tbody></table>
+<h1 id='membership'>Membership</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='for-business-users-3'>For Business Users</h2>
 <table><thead>
 <tr>
 <th>Method</th>
@@ -583,7 +770,7 @@
 </tbody></table>
 
 <p>...</p>
-<h2 id='for-client-users-2'>For Client Users</h2>
+<h2 id='for-client-users-3'>For Client Users</h2>
 <table><thead>
 <tr>
 <th>Method</th>
@@ -602,7 +789,213 @@
 <td>Quit a membership</td>
 </tr>
 </tbody></table>
-<h1 id='notification'>Notification</h1><h1 id='order'>Order</h1><h1 id='reward'>Reward</h1><h1 id='search'>Search</h1><h1 id='settings'>Settings</h1><h1 id='tagging'>Tagging</h1>
+<h1 id='notification'>Notification</h1>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>setNotificationFrequency</td>
+<td>PUT user/{user-id}/notification-frequency</td>
+<td>Set the frequency of the nofitication</td>
+</tr>
+</tbody></table>
+<h1 id='order'>Order</h1><h2 id='for-business-users-4'>For Business Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getProduct</td>
+<td>GET user/{user-id}/product</td>
+<td>Get all products and their categories</td>
+</tr>
+<tr>
+<td>setProduct</td>
+<td>POST user/{user-id}/product</td>
+<td>Submit a product</td>
+</tr>
+<tr>
+<td>editProduct</td>
+<td>PUT user/{user-id}/product/{product-id}</td>
+<td>Edit a product</td>
+</tr>
+<tr>
+<td>deleteProduct</td>
+<td>DELETE user/{user-id}/product/{product-id}</td>
+<td>Delete a product</td>
+</tr>
+<tr>
+<td>addProductCategory</td>
+<td>POST user/{user-id}/product-category</td>
+<td>Add a new product category</td>
+</tr>
+<tr>
+<td>editProductCategory</td>
+<td>PUT user/{user-id}/product-category/{product-category-id}</td>
+<td>Edit a product category</td>
+</tr>
+<tr>
+<td>deleteProductCategory</td>
+<td>DELTE user/{user-id}/product-category/{product-category-id}</td>
+<td>Delete a product category</td>
+</tr>
+</tbody></table>
+<h2 id='for-client-users-4'>For Client Users</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getProduct</td>
+<td>GET user/{user-id}/product</td>
+<td>Get all products and their categories</td>
+</tr>
+</tbody></table>
+<h1 id='reward'>Reward</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='display-reward-points'>Display Reward Points</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>getRewardPoints</td>
+<td>GET user/{user-id}/reward-points</td>
+<td>Get the current reward points of the user</td>
+</tr>
+<tr>
+<td>getRewardHistory</td>
+<td>Get user/{user-id}/reward-history</td>
+<td>Get the reward history of the user</td>
+</tr>
+</tbody></table>
+<h2 id='add-reward-points'>Add Reward Points</h2>
+<p>Each type of reward addition operation must be recorded and saved to history, a transaction id should be assigned to each reward addition operation. </p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>addCheckInReward</td>
+<td>POST user/{user-id}/check-in-reward</td>
+<td>Add check-in reward towards the user</td>
+</tr>
+<tr>
+<td>addDiscountReward</td>
+<td>POST user/{user-id}/discout-reward</td>
+<td>Add discount usage reward towards the user</td>
+</tr>
+<tr>
+<td>addSharingReward</td>
+<td>POST user/{user-id}/sharing-reward</td>
+<td>Add sharing reward towards the user</td>
+</tr>
+<tr>
+<td>addBindingAccountReward</td>
+<td>POST user/{user-id}/bind-acct-reward</td>
+<td>Add binding account reward towards the user</td>
+</tr>
+<tr>
+<td>addOrderInfoReward</td>
+<td>POST user/{user-id}/order-info-reward</td>
+<td>Add order information submittal reward towards the user</td>
+</tr>
+<tr>
+<td>addSurveyReward</td>
+<td>POST user/{user-id}/survey-reward</td>
+<td>Add survey submittal reward towards the user</td>
+</tr>
+</tbody></table>
+<h2 id='deduct-reward-points'>Deduct Reward Points</h2>
+<p>Each type of reward deduction operation must be recorded and saved to history, a transaction id should be assigned to each reward deduction operation. </p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>deductDiscountReward</td>
+<td>POST user/{user-id}/discount-reward/{discount-id}</td>
+<td>Deduct discount reward points towards the user</td>
+</tr>
+<tr>
+<td>deductInactiveReward</td>
+<td>POST user/{uesr-id}/inactive</td>
+<td>Deduct inactive reward points towards the user</td>
+</tr>
+</tbody></table>
+<h1 id='search'>Search</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>generalSearch</td>
+<td>POST user/{user-id}/search</td>
+<td>General search which includes name of business / organization, location of business / organization, type of business / organization, type of product, and product category.</td>
+</tr>
+<tr>
+<td>discountSearch</td>
+<td>POST user/{user-id}/search/discount</td>
+<td>Discount search which limited search scope within discounts</td>
+</tr>
+<tr>
+<td>membershipSearch</td>
+<td>POST user/{user-id}/search/membership</td>
+<td>Membership search which limited search scope within memberships</td>
+</tr>
+</tbody></table>
+<h1 id='settings'>Settings</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+<h2 id='general-settings'>General Settings</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>settingsConfig</td>
+<td>POST user/{user-id}/setting-config</td>
+<td>Submit settings configuration of the user</td>
+</tr>
+</tbody></table>
+<h2 id='personal-settings'>Personal Settings</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h2 id='other-settings'>Other Settings</h2><h1 id='tagging'>Tagging</h1>
 <p>=============================================================================</p>
 <h1 id='other-samples'>Other Samples</h1><h1 id='sample-authentication'>Sample Authentication</h1>
 <blockquote>
