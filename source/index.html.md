@@ -249,16 +249,24 @@ URLs relateive to ___________, unless otherwise noted
 ## General Settings
 Method | HTTP request | Description
 -------| ------------ | -----------
-settingsConfig | POST user/{user-id}/setting-config | Submit settings configuration of the user
+settingsConfig | PUT user/{user-id}/setting-config | Submit settings configuration of the user
 
 ## Personal Settings
 Method | HTTP request | Description
 -------| ------------ | -----------
-
-## Other Settings
-
+addAddress | POST user/{user-id}/address | Add a new address
+editAddress | PUT user/{user-id}/address/{address-id} | Edit an address
+deleteAddress | DELTE user/{user-id}/address/{address-id} | Delete an address
+ 
 # Tagging
 
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+addTag | POST user/{user-id}/tag | Add a new tag to the user
+editTag | PUT user/{user-id}/tag/{tag-id} | Edit a tag of the user
+deleteTag | DELETE user/{user-id}/tag/{tag-id} | Delete a tag of the user
 
 =============================================================================
 # Other Samples
