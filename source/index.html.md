@@ -23,6 +23,21 @@ search: true
 Sample API documentation.
 
 # Advertisement
+
+URLs relateive to ___________, unless otherwise noted
+
+## For Business Users
+Method | HTTP request | Description
+-------| ------------ | -----------
+submitAds | POST user/{user-id}/ads | Submit a new advertisement
+editAds | PUT user/{user-id}/ads/{ads-id} | Edit an advertisement
+deleteAds | DELETE user/{user-id}/ads/{ads-id} | Delete an advertisement
+
+## For Client Users
+Method | HTTP request | Description
+-------| ------------ | -----------
+clickAds | POST user/{user-id}/ads/{ads-id} | Submit advertisement click information
+
 # Business User
 
 URLs relateive to ___________, unless otherwise noted
@@ -76,6 +91,14 @@ shareDiscount | POST user/{user-id}/share/{platform-id}/discount/{discount-id} |
 shareRequest | POST user/{user-id}/share/{platform-id}/request/{request-id} | Share a request to a platform
 
 # Device ID
+
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getDeviceNameAndMac | GET user/{user-id}/device | Get the list of names and MAC address of the devices of the user
+
+
 # Discount
 
 URLs relateive to ___________, unless otherwise noted
@@ -89,6 +112,10 @@ getDiscountStatus | GET user/{user-id}/discount/{discount-id} | Get the informat
 addDiscount | POST user/{user-id}/discount | Add a new discount
 editDiscount | PATCH user/{user-id}/discount/{discount-id} | Edit a discount
 removeDiscount | DELETE user/{user-id}/discount/{discount-id} | Delete a discount
+addDiscountRequest | POST user/{requester-user-id}/request/discount/{discount-id} | Submit a request of a discount
+removeDiscountRequest | DELETE user/{requester-user-id}/request/discount/{discount-id} | Delete a request of a discount 
+approveDiscount | POST user/{approver-user-id}/approve/discount/{discount-id} | Approve a discount request from another user
+rejectDiscount | DELETE user/{approver-user-id}/approve/discount/{discount-id} | Delete a discount request from another user
 
 ## For Client Users
 
@@ -100,8 +127,34 @@ applyDiscount | POST user/{user-id}/discount/{discount-id}/apply | Apply a disco
 removeDiscount | DELETE user/{user-id}/discount/{discount-id} | Remove a discount from the user's account
 
 # Geo-Service
+
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+getGeoLoc | GET user/{user-id}/geoloc | Get the latitude and longtitude of the user
+getDrivingStatus | GET user/{user-id}/driving | Get the driving time and distance from user's current location
+getMap | GET user/{user-id}/map | Get the map with direction of the user's current location to the destination
+
 # Help
-# Login / Signup
+
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+submitFeedback | POST user/{user-id}/feedback | Submit a feedback
+
+# Login / Signup / Password
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+signup | POST signup | Submit a signup request
+login | POST login | Submit a login request
+verifyUser | POST verify-user | Verify the user's information in a forget password event
+changePassword | POST change-password | Change the password of the user
+
+
 # Membership
 
 URLs relateive to ___________, unless otherwise noted
@@ -126,10 +179,84 @@ joinMembership | POST user/{user-id}/membership/{membership-id} | Join a members
 quitMembership | DELTE user/{user-id}/membership/{membership-id} | Quit a membership
 
 # Notification
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+setNotificationFrequency | PUT user/{user-id}/notification-frequency | Set the frequency of the nofitication
+
 # Order
+
+## For Business Users
+Method | HTTP request | Description
+-------| ------------ | -----------
+getProduct | GET user/{user-id}/product | Get all products and their categories
+setProduct | POST user/{user-id}/product | Submit a product
+editProduct | PUT user/{user-id}/product/{product-id} | Edit a product
+deleteProduct | DELETE user/{user-id}/product/{product-id} | Delete a product
+addProductCategory | POST user/{user-id}/product-category | Add a new product category
+editProductCategory | PUT user/{user-id}/product-category/{product-category-id} | Edit a product category
+deleteProductCategory | DELTE user/{user-id}/product-category/{product-category-id} | Delete a product category
+
+## For Client Users
+Method | HTTP request | Description
+-------| ------------ | -----------
+getProduct | GET user/{user-id}/product | Get all products and their categories
+
 # Reward
+
+URLs relateive to ___________, unless otherwise noted
+
+## Display Reward Points
+Method | HTTP request | Description
+-------| ------------ | -----------
+getRewardPoints | GET user/{user-id}/reward-points | Get the current reward points of the user
+getRewardHistory | Get user/{user-id}/reward-history | Get the reward history of the user
+
+## Add Reward Points
+Each type of reward addition operation must be recorded and saved to history, a transaction id should be assigned to each reward addition operation. 
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+addCheckInReward | POST user/{user-id}/check-in-reward | Add check-in reward towards the user
+addDiscountReward | POST user/{user-id}/discout-reward | Add discount usage reward towards the user
+addSharingReward | POST user/{user-id}/sharing-reward | Add sharing reward towards the user
+addBindingAccountReward | POST user/{user-id}/bind-acct-reward | Add binding account reward towards the user
+addOrderInfoReward | POST user/{user-id}/order-info-reward | Add order information submittal reward towards the user
+addSurveyReward | POST user/{user-id}/survey-reward | Add survey submittal reward towards the user
+
+## Deduct Reward Points
+Each type of reward deduction operation must be recorded and saved to history, a transaction id should be assigned to each reward deduction operation. 
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+deductDiscountReward | POST user/{user-id}/discount-reward/{discount-id} | Deduct discount reward points towards the user
+deductInactiveReward | POST user/{uesr-id}/inactive | Deduct inactive reward points towards the user
+
 # Search
+
+URLs relateive to ___________, unless otherwise noted
+
+Method | HTTP request | Description
+-------| ------------ | -----------
+generalSearch | POST user/{user-id}/search | General search which includes name of business / organization, location of business / organization, type of business / organization, type of product, and product category.
+discountSearch | POST user/{user-id}/search/discount | Discount search which limited search scope within discounts
+membershipSearch | POST user/{user-id}/search/membership | Membership search which limited search scope within memberships
+
 # Settings
+
+URLs relateive to ___________, unless otherwise noted
+
+## General Settings
+Method | HTTP request | Description
+-------| ------------ | -----------
+settingsConfig | POST user/{user-id}/setting-config | Submit settings configuration of the user
+
+## Personal Settings
+Method | HTTP request | Description
+-------| ------------ | -----------
+
+## Other Settings
+
 # Tagging
 
 
