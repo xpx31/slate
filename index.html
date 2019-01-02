@@ -335,9 +335,6 @@
                   <li>
                     <a href="#personal-settings" class="toc-h2 toc-link" data-title="Personal Settings">Personal Settings</a>
                   </li>
-                  <li>
-                    <a href="#other-settings" class="toc-h2 toc-link" data-title="Other Settings">Other Settings</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -982,7 +979,7 @@
 </thead><tbody>
 <tr>
 <td>settingsConfig</td>
-<td>POST user/{user-id}/setting-config</td>
+<td>PUT user/{user-id}/setting-config</td>
 <td>Submit settings configuration of the user</td>
 </tr>
 </tbody></table>
@@ -994,8 +991,49 @@
 <th>Description</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>addAddress</td>
+<td>POST user/{user-id}/address</td>
+<td>Add a new address</td>
+</tr>
+<tr>
+<td>editAddress</td>
+<td>PUT user/{user-id}/address/{address-id}</td>
+<td>Edit an address</td>
+</tr>
+<tr>
+<td>deleteAddress</td>
+<td>DELTE user/{user-id}/address/{address-id}</td>
+<td>Delete an address</td>
+</tr>
 </tbody></table>
-<h2 id='other-settings'>Other Settings</h2><h1 id='tagging'>Tagging</h1>
+<h1 id='tagging'>Tagging</h1>
+<p>URLs relateive to ___________, unless otherwise noted</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>addTag</td>
+<td>POST user/{user-id}/tag</td>
+<td>Add a new tag to the user</td>
+</tr>
+<tr>
+<td>editTag</td>
+<td>PUT user/{user-id}/tag/{tag-id}</td>
+<td>Edit a tag of the user</td>
+</tr>
+<tr>
+<td>deleteTag</td>
+<td>DELETE user/{user-id}/tag/{tag-id}</td>
+<td>Delete a tag of the user</td>
+</tr>
+</tbody></table>
+
 <p>=============================================================================</p>
 <h1 id='other-samples'>Other Samples</h1><h1 id='sample-authentication'>Sample Authentication</h1>
 <blockquote>
